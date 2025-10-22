@@ -6,7 +6,7 @@
 *A Unified Learning–Physics Framework for Safe, Smooth, and Energy-Efficient Flight in Dynamic Environments*  
 
 <!-- ===== Main Animation ===== -->
-<img src="results/anim_pinn.gif" width="75%" alt="PINN UAV trajectory animation"/>
+<img src="fig/anim_pinn.gif" width="75%" alt="PINN UAV trajectory animation"/>
 
 <p><em>Figure 1. Trajectory evolution of the proposed Physics-Informed Neural Network (PINN) model under dynamic wind fields.</em></p>
 
