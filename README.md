@@ -1,13 +1,14 @@
-<!--  ========================  -->
-<!--      🛰️ UAV-PINN README    -->
-<!--  ========================  -->
+<!-- ===== UAV-PINN README Visual Section ===== -->
 
 <div align="center">
 
 # 🛰️ Physics-Informed UAV Trajectory Planning  
 *A Unified Learning–Physics Framework for Safe, Smooth, and Energy-Efficient Flight in Dynamic Environments*  
 
-<img src="results/anim_pinn.gif" width="65%" alt="PINN UAV trajectory animation"/>
+<!-- ===== Main Animation ===== -->
+<img src="results/anim_pinn.gif" width="75%" alt="PINN UAV trajectory animation"/>
+
+<p><em>Figure 1. Trajectory evolution of the proposed Physics-Informed Neural Network (PINN) model under dynamic wind fields.</em></p>
 
 [![Python](https://img.shields.io/badge/python-3.9%2B-blue.svg)](#)
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.x-orange.svg)](#)
@@ -15,46 +16,43 @@
 [![Stars](https://img.shields.io/github/stars/zhuoyongshi/uav-pinn-planning?style=social)](#)
 [![arXiv](https://img.shields.io/badge/arXiv-2501.12345-b31b1b.svg)](https://arxiv.org/abs/2501.12345)
 
+---
+
+### ✈️ Comparative Flight Dynamics
+
+<table>
+<tr>
+<td align="center"><b>A* Algorithm</b><br><img src="results/anim_astar.gif" width="95%"/></td>
+<td align="center"><b>Kino-RRT*</b><br><img src="results/anim_rrt.gif" width="95%"/></td>
+</tr>
+</table>
+
+<p><em>Figure 2. Baseline trajectories of A* (left) and Kino-RRT* (right) in the same environment.  
+Both rely on discrete sampling and lack dynamic smoothness compared to the PINN approach.</em></p>
+
+---
+
+### 🧠 Evolution of Model Parameters
+
+<table>
+<tr>
+<td align="center"><img src="results/loss_curve_pinn.png" width="90%"/><br><em>(a) PINN Loss Convergence</em></td>
+<td align="center"><img src="results/energy_curve_astar.png" width="90%"/><br><em>(b) A* Energy Profile</em></td>
+<td align="center"><img src="results/energy_curve_rrt.png" width="90%"/><br><em>(c) RRT* Energy Profile</em></td>
+</tr>
+</table>
+
+<p><em>Figure 3. Training and control-energy evolution across different algorithms.  
+The PINN demonstrates smoother convergence and lower energy oscillation amplitude.</em></p>
+
+---
+
+### 📊 Quantitative Comparison
+
+<img src="results/bars_all_metrics.png" width="80%"/>
+
+<p><em>Figure 4. Quantitative evaluation of flight performance:  
+energy consumption, smoothness, and risk proximity.  
+The physics-informed model achieves the best trade-off across all metrics.</em></p>
+
 </div>
-
----
-
-## 🧭 Overview  
-
-**Goal:** Develop a **Physics-Informed Neural Network (PINN)** for UAV trajectory optimization that unifies:  
-- Aerodynamic dynamics  
-- Environmental wind fields  
-- Obstacle potentials  
-- Control energy and smoothness objectives  
-
-> ✨ Unlike data-driven DRL or search-based A*/RRT*, the proposed PINN **learns directly from the governing equations**, embedding physics constraints as soft losses.
-
----
-
-## 📘 Abstract  
-
-Unmanned aerial vehicles (UAVs) flying in dynamic wind fields must balance **safety**, **smoothness**, and **energy efficiency**.  
-This repository presents a physics-informed framework that integrates UAV dynamics, environmental disturbances, and obstacle risks into a unified optimization model.  
-Compared to traditional A\* and kinodynamic RRT\*, our PINN-based planner produces **continuous**, **physically consistent**, and **energy-optimal** trajectories.  
-All experiments are reproducible, with visualizations and quantitative metrics included.
-
----
-
-## 🧩 Conceptual Framework  
-
-<p align="center">
-  <img src="docs/figures/concept_framework.png" width="85%" alt="Concept framework"/>
-  <br>
-  <em>Figure 1. Physics-informed UAV trajectory optimization system integrating environment perception, dynamics modeling, and neural optimization.</em>
-</p>
-
----
-
-## ⚙️ Installation  
-
-```bash
-git clone https://github.com/zhuoyongshi/uav-pinn-planning.git
-cd uav-pinn-planning
-conda create -n uav-pinn python=3.9
-conda activate uav-pinn
-pip install torch numpy matplotlib tqdm pyyaml
