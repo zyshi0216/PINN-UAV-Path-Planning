@@ -6,7 +6,7 @@
 *A Unified Learning–Physics Framework for Safe, Smooth, and Energy-Efficient Flight in Dynamic Environments*  
 
 <!-- ===== Main Animation ===== -->
-<img src="fig/anim_pinn.gif" width="75%" alt="PINN UAV trajectory animation"/>
+<img src="fig/traj_PINN.gif" width="75%" alt="PINN UAV trajectory animation"/>
 
 <p><em>Figure 1. Trajectory evolution of the proposed Physics-Informed Neural Network (PINN) model under dynamic wind fields.</em></p>
 
@@ -22,8 +22,8 @@
 
 <table>
 <tr>
-<td align="center"><b>A* Algorithm</b><br><img src="results/anim_astar.gif" width="95%"/></td>
-<td align="center"><b>Kino-RRT*</b><br><img src="results/anim_rrt.gif" width="95%"/></td>
+<td align="center"><b>A* Algorithm</b><br><img src="fig/traj_A.gif" width="95%"/></td>
+<td align="center"><b>Kino-RRT*</b><br><img src="fig/traj_RRT.gif" width="95%"/></td>
 </tr>
 </table>
 
@@ -36,9 +36,9 @@ Both rely on discrete sampling and lack dynamic smoothness compared to the PINN 
 
 <table>
 <tr>
-<td align="center"><img src="results/loss_curve_pinn.png" width="90%"/><br><em>(a) PINN Loss Convergence</em></td>
-<td align="center"><img src="results/energy_curve_astar.png" width="90%"/><br><em>(b) A* Energy Profile</em></td>
-<td align="center"><img src="results/energy_curve_rrt.png" width="90%"/><br><em>(c) RRT* Energy Profile</em></td>
+<td align="center"><img src="fig/figure_mosaic.png" width="90%"/><br><em>(a) PINN Loss Convergence</em></td>
+<td align="center"><img src="fig/figure_mosaic_A.png" width="90%"/><br><em>(b) A* Energy Profile</em></td>
+<td align="center"><img src="fig/figure_mosaic_rrt.png" width="90%"/><br><em>(c) RRT* Energy Profile</em></td>
 </tr>
 </table>
 
@@ -49,7 +49,7 @@ The PINN demonstrates smoother convergence and lower energy oscillation amplitud
 
 ### 📊 Quantitative Comparison
 
-<img src="results/bars_all_metrics.png" width="80%"/>
+<img src="fig/bars_all_metrics.png" width="80%"/>
 
 <p><em>Figure 4. Quantitative evaluation of flight performance:  
 energy consumption, smoothness, and risk proximity.  
