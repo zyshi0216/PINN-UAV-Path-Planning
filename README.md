@@ -14,7 +14,7 @@
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.x-orange.svg)](#)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](#)
 [![Stars](https://img.shields.io/github/stars/zhuoyongshi/uav-pinn-planning?style=social)](#)
-[![arXiv](https://img.shields.io/badge/arXiv-2501.21874.svg)](https://arxiv.org/abs/2510.21874)
+[![arXiv](https://img.shields.io/badge/arXiv-2501.12345-b31b1b.svg)](https://arxiv.org/abs/2510.21874)
 
 ---
 
